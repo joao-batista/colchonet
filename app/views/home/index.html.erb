@@ -1,0 +1,15 @@
+<h1>Colcho.net</h1>
+<p> 
+  <h1>Quartos recém postados</h1> 
+  <ul> 
+    <% @rooms.each do |room| %> 
+      <li><%= link_to room.complete_name, room %></li> 
+    <% end %> 
+  </ul> 
+  
+  Escolha uma das ações a seguir: 
+  <ul> 
+    <li><%= link_to  t('layout.signup'), new_user_path %></li> 
+    <li><%= link_to  t('layout.rooms'), rooms_path %></li> 
+  </ul> 
+</p>

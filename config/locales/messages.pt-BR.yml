@@ -1,0 +1,5 @@
+"pt-BR":
+  messages:
+    confirm: Tem certeza que deseja deletar o registros?
+    listing: Listando
+    form_error: 'Há erros no formulário, por favor verifique.'

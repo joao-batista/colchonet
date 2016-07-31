@@ -1,0 +1,30 @@
+<h1><%= t('messages.listing') %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= @users.model.human_attribute_name("full_name") %></th>
+      <th><%= @users.model.human_attribute_name("location") %></th>
+      <th><%= @users.model.human_attribute_name("email") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.full_name %></td>
+        <td><%= user.location %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to t('links.show'), user %></td>
+        <td><%= link_to t('links.edit'), edit_user_path(user) %></td>
+        <td><%= link_to t('links.destroy'), user, method: :delete, 
+        data: { confirm: t('messages.confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('links.new'), new_user_path %>
