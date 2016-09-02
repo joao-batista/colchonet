@@ -17,7 +17,7 @@ $(function() {
 		$(container).find('input:submit')
 		.replaceWith($('<i/>')
 		.addClass(icon_class).css('color', color));
-	}; 
+	}
 
 	function highlightStars(elem) { 
 		elem.parent().children('label').removeClass('toggled'); 
